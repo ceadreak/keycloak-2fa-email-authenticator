@@ -1,6 +1,6 @@
 package com.mesutpiskin.keycloak.auth.email;
 
-import lombok.extern.jbosslog.JBossLog;
+import org.jboss.logging.Logger;
 
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.AuthenticationFlowError;
@@ -26,8 +26,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@JBossLog
 public class EmailAuthenticatorForm extends AbstractUsernameFormAuthenticator {
+    private static final Logger log = Logger.getLogger(EmailAuthenticatorForm.class);
 
     @Override
     public void authenticate(AuthenticationFlowContext context) {
